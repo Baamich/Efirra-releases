@@ -1,6 +1,6 @@
 # Efirra
 
-Программа для эфиров и записи на Windows: всё, что умеет OBS, плюс общий чат площадок, свои алерты и моды — и при этом легче. [English below](#english)
+Программа для эфиров и записи на Windows: всё, что умеет OBS, плюс общий чат площадок, свои алерты и моды. [English below](#english)
 
 **[Скачать установщик](https://github.com/Baamich/Efirra-releases/releases/latest/download/EfirraSetup.exe)** · [Все версии](https://github.com/Baamich/Efirra-releases/releases) · [Моды](https://github.com/Baamich/Efirra-mods)
 
@@ -8,7 +8,7 @@
 
 ## Зачем ещё одна программа для эфиров
 
-- **Легче.** Кадр от захвата до кодировщика не покидает видеокарту, а страницы в неактивных сценах засыпают. Основной процесс в замерах в 2 раза легче OBS по процессору и в 2,4 раза по памяти; страницы-виджеты — на уровне OBS.
+- **Бережно к компьютеру.** Кадр от захвата до кодировщика не покидает видеокарту, страницы в неактивных сценах засыпают, а сама программа занимает 32 МБ против 461 МБ у OBS.
 - **Всё нужное уже внутри.** Несколько площадок сразу, общий чат, алерты, защита личного в кадре, виртуальный микрофон с фильтрами — без плагинов и отдельных программ.
 - **Переезд из OBS за пару минут.** Импорт сцен, источников, фильтров, переходов, браузерных панелей и настроек. Окно импорта заранее показывает, что не перенесётся и почему.
 - **Пульты как у OBS.** Stream Deck, Streamer.bot, Touch Portal и свои программы подключаются по протоколу obs-websocket 5, как к OBS.
@@ -91,7 +91,7 @@ Efirra — закрытая программа, здесь только гото
 
 ## English
 
-A streaming and recording app for Windows: everything OBS does, plus a shared chat for all platforms, built-in alerts and mods — and lighter.
+A streaming and recording app for Windows: everything OBS does, plus a shared chat for all platforms, built-in alerts and mods.
 
 **[Download the installer](https://github.com/Baamich/Efirra-releases/releases/latest/download/EfirraSetup.exe)** · [All versions](https://github.com/Baamich/Efirra-releases/releases) · [Mods](https://github.com/Baamich/Efirra-mods)
 
@@ -99,7 +99,7 @@ A streaming and recording app for Windows: everything OBS does, plus a shared ch
 
 ### Why another streaming app
 
-- **Lighter.** The frame stays on the GPU from capture to encoder, and pages in inactive scenes go to sleep. In measurements the main process uses 2× less CPU and 2.4× less memory than OBS; web widgets are on par with OBS.
+- **Easy on your computer.** The frame stays on the GPU from capture to encoder, pages in inactive scenes go to sleep, and the app itself takes 32 MB against 461 MB for OBS.
 - **Everything you need is built in.** Several platforms at once, a shared chat, alerts, privacy protection in the frame, a virtual microphone with filters — no plugins or extra apps.
 - **Move from OBS in a couple of minutes.** Scenes, sources, filters, transitions, browser docks and settings are imported. The import window shows in advance what will not carry over and why.
 - **Remotes like OBS.** Stream Deck, Streamer.bot, Touch Portal and your own programs connect over obs-websocket 5, just as to OBS.
