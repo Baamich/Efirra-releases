@@ -15,19 +15,20 @@
 
 ## Сравнение с OBS
 
-Замер 18 ноября 2026, Efirra 0.6.3 и OBS 32.1.2 на одном ноутбуке (Intel i5-10500H, RTX 3050 Laptop, монитор 1080p 120 Гц). Обе программы с чистыми настройками, кадр 1920×1080 60 к/с, запись NVENC 6000 кбит/с, одна и та же сцена. Процессор — вся программа вместе с её браузером, в процентах от всех ядер, как в диспетчере задач.
+Замер 18 ноября 2026, Efirra 0.6.4 и OBS 32.1.2 на одном ноутбуке (Intel i5-10500H, RTX 3050 Laptop, монитор 1080p 120 Гц). Обе программы с чистыми настройками, кадр 1920×1080 60 к/с, запись NVENC 6000 кбит/с, одна и та же сцена. Процессор — вся программа вместе с её браузером, в процентах от всех ядер, как в диспетчере задач.
 
 | Сцена | Процессор, Efirra / OBS | Своя память, Efirra / OBS |
 |---|---|---|
-| Открыта, ничего не пишется | 0,4–0,6% / 0,5% | 293 / 203 МБ |
-| Запись: экран и надпись | **0,6–0,9% / 1,0%** | 553 / 528 МБ |
-| Обычный стрим: экран, надпись, 3 виджета | 1,1–1,4% / 1,1% | **744–771 / 820–835 МБ** |
-| 8 виджетов с непрерывной анимацией | 10,9–11,2% / 8,5–8,8% | **919–926 / 1011–1050 МБ** |
+| Открыта, ничего не пишется | 0,4% / 0,5% | 293 / 203 МБ |
+| Запись: экран и надпись | **0,6% / 1,0%** | 558 / 528 МБ |
+| Обычный стрим: экран, надпись, 3 виджета | 1,3% / 1,1% | **771 / 820 МБ** |
+| 8 виджетов с непрерывной анимацией | 8,5% / 8,5% | **926 / 1050 МБ** |
 | Размер программы | **32 / 461 МБ** | |
 
-- На обычной сцене видеокарта занята меньше: 27% против 38%.
+- Видеокарта занята меньше: 27% против 38% на обычной сцене, 24% против 28% на сцене с анимацией.
 - Виджеты в сценах, которых нет в эфире, у Efirra засыпают и почти ничего не тратят.
-- Сцена с восемью постоянно анимированными виджетами в 0.6.3 пока тяжелее, чем в OBS. В следующей версии анимации страниц тоже идут ровно по 60 кадров, и замер показывает 8,5% против 8,5%.
+- Страницы рисуют ровно 60 кадров в секунду, как нужно эфиру, даже на мониторе 120 Гц и выше.
+- Разница в десятые доли процента — в пределах разброса между замерами: одна и та же сборка от прогона к прогону даёт ±0,3%.
 - Цифры одного компьютера. На видеокартах AMD и Intel они могут отличаться.
 
 ## Что умеет
@@ -123,19 +124,20 @@ A streaming and recording app for Windows: everything OBS does, plus a shared ch
 
 ### Compared with OBS
 
-Measured on 18 November 2026, Efirra 0.6.3 and OBS 32.1.2 on the same laptop (Intel i5-10500H, RTX 3050 Laptop, 1080p 120 Hz monitor). Both apps with clean settings, a 1920×1080 60 fps frame, NVENC recording at 6000 kbps, the same scene. CPU is the whole app with its browser, as a share of all cores, like in Task Manager.
+Measured on 18 November 2026, Efirra 0.6.4 and OBS 32.1.2 on the same laptop (Intel i5-10500H, RTX 3050 Laptop, 1080p 120 Hz monitor). Both apps with clean settings, a 1920×1080 60 fps frame, NVENC recording at 6000 kbps, the same scene. CPU is the whole app with its browser, as a share of all cores, like in Task Manager.
 
 | Scene | CPU, Efirra / OBS | Private memory, Efirra / OBS |
 |---|---|---|
-| Open, nothing recorded | 0.4–0.6% / 0.5% | 293 / 203 MB |
-| Recording: screen and a caption | **0.6–0.9% / 1.0%** | 553 / 528 MB |
-| Typical stream: screen, caption, 3 widgets | 1.1–1.4% / 1.1% | **744–771 / 820–835 MB** |
-| 8 widgets with constant animation | 10.9–11.2% / 8.5–8.8% | **919–926 / 1011–1050 MB** |
+| Open, nothing recorded | 0.4% / 0.5% | 293 / 203 MB |
+| Recording: screen and a caption | **0.6% / 1.0%** | 558 / 528 MB |
+| Typical stream: screen, caption, 3 widgets | 1.3% / 1.1% | **771 / 820 MB** |
+| 8 widgets with constant animation | 8.5% / 8.5% | **926 / 1050 MB** |
 | App size | **32 / 461 MB** | |
 
-- On a typical scene the graphics card is less busy: 27% against 38%.
+- The graphics card is less busy: 27% against 38% on a typical scene, 24% against 28% on the animated one.
 - Widgets in scenes that are not on air go to sleep in Efirra and cost almost nothing.
-- A scene with eight constantly animated widgets is still heavier than in OBS in 0.6.3. In the next version page animations also run at exactly 60 fps, and the measurement shows 8.5% against 8.5%.
+- Pages draw exactly 60 frames per second, as the stream needs, even on a 120 Hz or faster monitor.
+- Differences of a few tenths of a percent are within run-to-run spread: the same build varies by ±0.3%.
 - These are numbers from one computer. AMD and Intel graphics cards may differ.
 
 ### Features
