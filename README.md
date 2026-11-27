@@ -34,29 +34,34 @@
 ## Что умеет
 
 **Эфир и запись**
-- Twitch, YouTube, Kick, VK Видео Live, PartyWatcher и свой сервер — одновременно; каждую площадку можно запустить и остановить отдельно.
-- Вход через площадку вместо копирования ключа. Ключи хранятся в защищённом хранилище Windows.
+- Twitch, YouTube, VK Видео Live, PartyWatcher и свой сервер — одновременно; каждую площадку можно запустить и остановить отдельно. Другие площадки, например Kick, подключаются как свой сервер: адрес и ключ.
+- Вход через площадку вместо копирования ключа. Ключи хранятся в защищённом хранилище Windows. Все входы — на одной вкладке «Подключения».
+- Панель **Об эфире**: название, категория и метки сразу на Twitch и VK Видео Live, без их сайтов.
 - Свои кодировщики NVENC, AMF и Windows, без FFmpeg. Автобитрейт при плохой сети, задержка эфира, переподключение после обрыва и после сбоя видеокарты.
 - Запись в MKV или MP4, HEVC, частями, отдельные дорожки каналов, метки. **Efirra Moment** — последние минуты экрана по одной клавише.
 - Проверка перед эфиром: ключи, сеть, микрофон, звук и диск за полминуты.
 
 **Сцены и источники**
-- Экран, окно, игра без внедрения в процесс, камера, картинки и GIF, слайд-шоу, видео и списки видео, страницы, текст, чат в кадре.
-- Группы, сцена в сцене, режим студии, мультивью, переходы, в том числе роликом с прозрачностью.
+- Один источник «Захват» для игры без внедрения в процесс, окна и монитора; камера, картинки и GIF, слайд-шоу, видео и списки видео, страницы, текст, чат в кадре.
+- Группы, сцена в сцене, режим студии, мультивью (лишние сцены убираются правой кнопкой), переходы, в том числе роликом с прозрачностью.
+- Виртуальная камера для Discord и Zoom: показывает эфир или свою сцену, например только веб-камеру на весь кадр.
 - Эффекты: хромакей, маски, скругление и рамка, таблицы цвета, задержка картинки.
 
 ![Конструктор алертов: слои, варианты по сумме, подписи](images/ru/panel-alerts.webp)
 
 **Алерты и оверлеи**
-- Свой алерт без браузера: картинки, ролики, звуки и подписи слоями, появление и уход, варианты по сумме, сохранение в файл.
+- Свой алерт без браузера: картинки, ролики, звуки и подписи слоями, появление и уход, печать по буквам, градиент, контур и тень текста, варианты по сумме, сохранение в файл.
 - Запуск клавишей, по таймеру, по событиям Twitch (подписка, подарок, рейд, биты), из Streamer.bot и скриптов.
+- **Конструктор наград**: награды за баллы канала Twitch и VK и команды чата вроде `!огонь` запускают алерт, звук, сцену или скрипт.
+- «Показывать мне»: алерт виден и стримеру поверх игры, а игра не теряет мышь и клавиши.
 - Панель **Оверлеи**: все страницы и алерты всех сцен в одном месте — обновить застрявший виджет, не переключая сцену.
 
 ![Панель «Оверлеи»](images/ru/panel-overlays.webp)
 
 **Чат**
-- Общий чат Twitch, YouTube, VK Видео Live и PartyWatcher в одной панели и в кадре, со смайлами.
-- Команды в чате без Streamer.bot: скрипт отвечает на `!тг` ссылкой прямо в чат VK или Twitch.
+- Общий чат Twitch, YouTube, VK Видео Live и PartyWatcher в одной панели и в кадре, со смайлами. Можно разделить: сверху события (подписки, рейды, биты, награды), снизу зрители.
+- Команды в чате без Streamer.bot: скрипт отвечает на `!тг` ссылкой прямо в чат VK или Twitch. Одно сообщение во все чаты сразу — из панели «Об эфире».
+- Страницы-виджеты получают общий чат и громкость канала микшера: свой чат в кадре и полоски под музыку без отдельных программ.
 
 **Звук**
 - Микшер со своей громкостью на каждой сцене, шумодав, компрессор, эквалайзер, приглушение музыки голосом, плагины VST3.
@@ -67,12 +72,14 @@
 
 **Защита и удобство**
 - Защита личного: окно почты, мессенджера или менеджера паролей в кадре закрывается мозаикой или размытием.
-- Горячие клавиши, работающие из игры, панели поверх игры, профили, стиль оформления.
+- Горячие клавиши, работающие из игры, панели поверх игры и связки таких окон, профили, стиль оформления.
+- Вкладка «Программы»: боты и мостики запускаются вместе с Efirra без окна консоли и закрываются вместе с ней.
+- Настройки раскладываются в несколько колонок, окно настроек тянется за угол.
 - Документация прямо в программе (F1) на русском и английском, с картинками.
 
 **Автоматизация и моды**
 - Скрипты на Lua в песочнице: без файлов, сети и ключа эфира, только с разрешения человека.
-- [Каталог модов](https://github.com/Baamich/Efirra-mods): скрипты, языки, темы, алерты и панели от других людей. Опасный мод владелец может отозвать, и программа удалит его сама.
+- [Каталог модов](https://github.com/Baamich/Efirra-mods): скрипты, языки, темы, алерты, эффекты, награды и панели от других людей. Свой мод можно отправить в каталог прямо из программы. Опасный мод владелец может отозвать, и программа удалит его сама.
 
 ![Импорт из OBS: что перенесётся и что нет](images/ru/obs-import.webp)
 
@@ -90,9 +97,8 @@
 
 Efirra развивается быстро: новая версия выходит раз в несколько дней, список изменений — в «Справка → Что нового» и в [выпусках](https://github.com/Baamich/Efirra-releases/releases). Сейчас в работе:
 
-- название и категория эфира прямо из программы для всех площадок;
-- награды за баллы канала Twitch для алертов;
-- чат Kick в общей ленте;
+- название и категория эфира для YouTube и PartyWatcher (Twitch и VK уже есть);
+- подпись установщика, чтобы Windows не предупреждала при установке;
 - больше проверки на видеокартах AMD и Intel.
 
 Это ранняя версия. Основная проверка идёт на Windows 10 с видеокартой NVIDIA. Если что-то не работает, приложите файл из «Справка → Открыть папку с логами» к [issue](https://github.com/Baamich/Efirra-releases/issues).
@@ -143,29 +149,34 @@ Measured on 18 November 2026, Efirra 0.6.4 and OBS 32.1.2 on the same laptop (In
 ### Features
 
 **Streaming and recording**
-- Twitch, YouTube, Kick, VK Video Live, PartyWatcher and your own server at the same time; each platform starts and stops on its own.
-- Sign in with the platform instead of copying the key. Keys are kept in the protected Windows store.
+- Twitch, YouTube, VK Video Live, PartyWatcher and your own server at the same time; each platform starts and stops on its own. Other platforms, such as Kick, connect as your own server: an address and a key.
+- Sign in with the platform instead of copying the key. Keys are kept in the protected Windows store. All sign-ins live on one Connections tab.
+- The **Stream info** panel: title, category and tags on Twitch and VK Video Live at once, without their sites.
 - Its own NVENC, AMF and Windows encoders, no FFmpeg. Automatic bitrate on a bad network, stream delay, reconnecting after a drop and after a GPU reset.
 - Recording to MKV or MP4, HEVC, split files, separate channel tracks, markers. **Efirra Moment** saves the last minutes of the screen with one key.
 - A pre-stream check: keys, network, microphone, sound and disk in half a minute.
 
 **Scenes and sources**
-- Screen, window, game without injection, camera, images and GIFs, slideshows, videos and playlists, pages, text, chat in the frame.
-- Groups, scene in a scene, studio mode, multiview, transitions including a stinger with transparency.
+- One Capture source for a game without injection, a window or a monitor; camera, images and GIFs, slideshows, videos and playlists, pages, text, chat in the frame.
+- Groups, scene in a scene, studio mode, multiview (right-click removes scenes you do not need), transitions including a stinger with transparency.
+- A virtual camera for Discord and Zoom: it shows the stream or a scene of its own, say just the webcam on the whole frame.
 - Effects: chroma key, masks, rounded corners and borders, color tables, picture delay.
 
 ![The alert builder: layers, amount variants, captions](images/en/panel-alerts.webp)
 
 **Alerts and overlays**
-- A built-in alert without a browser: pictures, clips, sounds and captions as layers, entrance and exit, variants by amount, saving to a file.
+- A built-in alert without a browser: pictures, clips, sounds and captions as layers, entrance and exit, typewriter text, gradient, outline and shadow, variants by amount, saving to a file.
 - Triggered by a hotkey, a timer, Twitch events (sub, gift, raid, bits), Streamer.bot and scripts.
+- **Reward builder**: Twitch and VK channel point rewards and chat commands like `!fire` start an alert, a sound, a scene or a script.
+- "Show me": the alert is also shown to the streamer on top of the game, and the game keeps the mouse and keys.
 - The **Overlays** panel: every page and alert of every scene in one place — refresh a stuck widget without switching scenes.
 
 ![The Overlays panel](images/en/panel-overlays.webp)
 
 **Chat**
-- A shared chat of Twitch, YouTube, VK Video Live and PartyWatcher in one panel and in the frame, with emotes.
-- Chat commands without Streamer.bot: a script answers `!tg` with a link right in the VK or Twitch chat.
+- A shared chat of Twitch, YouTube, VK Video Live and PartyWatcher in one panel and in the frame, with emotes. It can be split: events (subs, raids, bits, rewards) on top, viewers below.
+- Chat commands without Streamer.bot: a script answers `!tg` with a link right in the VK or Twitch chat. One message to every chat at once from the Stream info panel.
+- Widget pages get the shared chat and a mixer channel's volume: your own chat in the frame and music bars without extra programs.
 
 **Sound**
 - A mixer with its own volume on every scene, noise suppression, compressor, equalizer, music ducking under your voice, VST3 plugins.
@@ -176,12 +187,14 @@ Measured on 18 November 2026, Efirra 0.6.4 and OBS 32.1.2 on the same laptop (In
 
 **Protection and comfort**
 - Privacy protection: a mail, messenger or password manager window in the frame is covered with a mosaic or blur.
-- Hotkeys that work from games, panels on top of the game, profiles, app styles.
+- Hotkeys that work from games, panels on top of the game and linked panel windows, profiles, app styles.
+- The Programs tab: bots and bridges start with Efirra without a console window and close with it.
+- Settings flow into several columns, and the settings window resizes from its corner.
 - Documentation inside the app (F1) in English and Russian, with pictures.
 
 **Automation and mods**
 - Lua scripts in a sandbox: no files, network or stream key, and only with the person's permission.
-- [Mod catalog](https://github.com/Baamich/Efirra-mods): scripts, languages, themes, alerts and panels by other people. The owner can revoke a dangerous mod, and the app removes it by itself.
+- [Mod catalog](https://github.com/Baamich/Efirra-mods): scripts, languages, themes, alerts, effects, rewards and panels by other people. You can send your own mod to the catalog right from the app. The owner can revoke a dangerous mod, and the app removes it by itself.
 
 ![OBS import: what carries over and what does not](images/en/obs-import.webp)
 
@@ -199,9 +212,8 @@ The installer has no developer signature yet, so Windows may show a SmartScreen 
 
 Efirra moves fast: a new version comes out every few days, and the changes are in Help → What's new and in the [releases](https://github.com/Baamich/Efirra-releases/releases). In progress now:
 
-- stream title and category right from the app for every platform;
-- Twitch channel point rewards for alerts;
-- the Kick chat in the shared feed;
+- stream title and category for YouTube and PartyWatcher (Twitch and VK are already there);
+- a signed installer, so Windows does not warn during install;
 - more testing on AMD and Intel graphics cards.
 
 This is an early version, tested mainly on Windows 10 with an NVIDIA graphics card. If something does not work, attach the file from Help → Open the logs folder to an [issue](https://github.com/Baamich/Efirra-releases/issues).
